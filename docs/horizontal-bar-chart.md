@@ -76,11 +76,10 @@ series = [
 
 ## Example
 
-<!-- <div style="height:20px;"></div>
-<p class="codepen" data-height="400" data-theme-id="dark" data-default-tab="js,result" data-user="yshushan" data-slug-hash="RwWMXre" data-preview="true" style="height: 400px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="HorizontalBarChart">
-  <span>See the Pen <a href="https://codepen.io/yshushan/pen/RwWMXre">
-  HorizontalBarChart</a> by Shushan Yang (<a href="https://codepen.io/yshushan">@yshushan</a>)
+<div style="height:20px;"></div>
+<p class="codepen" data-height="450" data-theme-id="light" data-default-tab="js,result" data-user="yangss3" data-slug-hash="RwRbERX" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="HorizontalBarChart">
+  <span>See the Pen <a href="https://codepen.io/yangss3/pen/RwRbERX">
+  HorizontalBarChart</a> by Nicholas Yang (<a href="https://codepen.io/yangss3">@yangss3</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script> -->
-<iframe width="100%" height="400" src="//jsrun.net/JAvKp/embedded/all/light" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>

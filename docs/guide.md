@@ -28,17 +28,19 @@ yarn add echarts @yangss/echarts-vue-components
 
 ## Usage
 
-### 全局注册
-
+### Use with bundler
+全局注册
 ```js
-import Vue from 'vue'
+import { createApp } from 'vue'
 import echartsComponents from '@yangss/echarts-vue-components'
 
+const app = createApp({/*  */})
+
 // 全局注册所有组件
-Vue.use(echartsComponents)
+app.use(echartsComponents)
 
 // 同时也可设置全局的调色盘
-Vue.use(echartsComponents, {
+app.use(echartsComponents, {
   colors: [
     '#581b98',
     '#9c1de7',
@@ -51,7 +53,7 @@ Vue.use(echartsComponents, {
 })
 ```
 
-### 局部注册
+局部注册
 
 ```js
 import { BaseChart, GridChart } from '@yangss/echarts-vue-components'
@@ -62,4 +64,11 @@ export default {
     GridChart
   }
 }
+```
+### Use with CDN
+通过 CDN 使用时，会在全局作用域暴露一个 `echartsVueComps` 变量，需要手动全局注册组件:
+```js
+const app = Vue.createApp(/*  */)
+app.use(echartsVueComps)
+// ...
 ```
