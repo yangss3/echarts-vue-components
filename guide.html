@@ -7,7 +7,7 @@
     <meta name="generator" content="VuePress 1.4.1">
     
     <meta name="description" content="A few simple chart components based on ECharts and Vue ">
-    <link rel="preload" href="/echarts-vue-components/assets/css/0.styles.3719db7b.css" as="style"><link rel="preload" href="/echarts-vue-components/assets/js/app.ccb897de.js" as="script"><link rel="preload" href="/echarts-vue-components/assets/js/2.6ff0a736.js" as="script"><link rel="preload" href="/echarts-vue-components/assets/js/9.ca291601.js" as="script"><link rel="prefetch" href="/echarts-vue-components/assets/js/10.0f914d9d.js"><link rel="prefetch" href="/echarts-vue-components/assets/js/11.f7c1cc89.js"><link rel="prefetch" href="/echarts-vue-components/assets/js/12.9eddc20f.js"><link rel="prefetch" href="/echarts-vue-components/assets/js/13.b26ebc17.js"><link rel="prefetch" href="/echarts-vue-components/assets/js/3.33f45c4d.js"><link rel="prefetch" href="/echarts-vue-components/assets/js/4.da2dc390.js"><link rel="prefetch" href="/echarts-vue-components/assets/js/5.e06a3e25.js"><link rel="prefetch" href="/echarts-vue-components/assets/js/6.9552d909.js"><link rel="prefetch" href="/echarts-vue-components/assets/js/7.db90231f.js"><link rel="prefetch" href="/echarts-vue-components/assets/js/8.0c867046.js">
+    <link rel="preload" href="/echarts-vue-components/assets/css/0.styles.3719db7b.css" as="style"><link rel="preload" href="/echarts-vue-components/assets/js/app.c3f1b550.js" as="script"><link rel="preload" href="/echarts-vue-components/assets/js/2.6ff0a736.js" as="script"><link rel="preload" href="/echarts-vue-components/assets/js/9.ab9e8b42.js" as="script"><link rel="prefetch" href="/echarts-vue-components/assets/js/10.e55c4385.js"><link rel="prefetch" href="/echarts-vue-components/assets/js/11.6c82fbad.js"><link rel="prefetch" href="/echarts-vue-components/assets/js/12.7d31057b.js"><link rel="prefetch" href="/echarts-vue-components/assets/js/13.b26ebc17.js"><link rel="prefetch" href="/echarts-vue-components/assets/js/3.33f45c4d.js"><link rel="prefetch" href="/echarts-vue-components/assets/js/4.da2dc390.js"><link rel="prefetch" href="/echarts-vue-components/assets/js/5.5d237e0c.js"><link rel="prefetch" href="/echarts-vue-components/assets/js/6.a25abb42.js"><link rel="prefetch" href="/echarts-vue-components/assets/js/7.e2ac755a.js"><link rel="prefetch" href="/echarts-vue-components/assets/js/8.5e789b08.js">
     <link rel="stylesheet" href="/echarts-vue-components/assets/css/0.styles.3719db7b.css">
   </head>
   <body>
@@ -29,14 +29,16 @@
 <span class="token function">yarn</span> <span class="token function">add</span> echarts @yangss/echarts-vue-components
 </code></pre></div><h3 id="通过-cdn-引入"><a href="#通过-cdn-引入" class="header-anchor">#</a> 通过 CDN 引入</h3> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>https://cdnjs.cloudflare.com/ajax/libs/echarts/4.7.0/echarts.min.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>https://unpkg.com/@yangss/echarts-vue-components/lib/echarts-vue-components.min.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</code></pre></div><h2 id="usage"><a href="#usage" class="header-anchor">#</a> Usage</h2> <h3 id="全局注册"><a href="#全局注册" class="header-anchor">#</a> 全局注册</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span>
+</code></pre></div><h2 id="usage"><a href="#usage" class="header-anchor">#</a> Usage</h2> <h3 id="use-with-bundler"><a href="#use-with-bundler" class="header-anchor">#</a> Use with bundler</h3> <p>全局注册</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> createApp <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
 <span class="token keyword">import</span> echartsComponents <span class="token keyword">from</span> <span class="token string">'@yangss/echarts-vue-components'</span>
 
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token function">createApp</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token comment">/*  */</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+
 <span class="token comment">// 全局注册所有组件</span>
-Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>echartsComponents<span class="token punctuation">)</span>
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>echartsComponents<span class="token punctuation">)</span>
 
 <span class="token comment">// 同时也可设置全局的调色盘</span>
-Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>echartsComponents<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>echartsComponents<span class="token punctuation">,</span> <span class="token punctuation">{</span>
   colors<span class="token operator">:</span> <span class="token punctuation">[</span>
     <span class="token string">'#581b98'</span><span class="token punctuation">,</span>
     <span class="token string">'#9c1de7'</span><span class="token punctuation">,</span>
@@ -47,7 +49,7 @@ Vue<span class="token punctuation">.</span><span class="token function">use</spa
     <span class="token string">'#feff89'</span>
   <span class="token punctuation">]</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
-</code></pre></div><h3 id="局部注册"><a href="#局部注册" class="header-anchor">#</a> 局部注册</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> BaseChart<span class="token punctuation">,</span> GridChart <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@yangss/echarts-vue-components'</span>
+</code></pre></div><p>局部注册</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> BaseChart<span class="token punctuation">,</span> GridChart <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@yangss/echarts-vue-components'</span>
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
   components<span class="token operator">:</span> <span class="token punctuation">{</span>
@@ -55,11 +57,14 @@ Vue<span class="token punctuation">.</span><span class="token function">use</spa
     GridChart
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
+</code></pre></div><h3 id="use-with-cdn"><a href="#use-with-cdn" class="header-anchor">#</a> Use with CDN</h3> <p>通过 CDN 使用时，会在全局作用域暴露一个 <code>echartsVueComps</code> 变量，需要手动全局注册组件:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> app <span class="token operator">=</span> Vue<span class="token punctuation">.</span><span class="token function">createApp</span><span class="token punctuation">(</span><span class="token comment">/*  */</span><span class="token punctuation">)</span>
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>echartsVueComps<span class="token punctuation">)</span>
+<span class="token comment">// ...</span>
 </code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/echarts-vue-components/base-chart.html">
         BaseChart
       </a>
       →
     </span></p></div> </main></div><div class="global-ui"></div></div>
-    <script src="/echarts-vue-components/assets/js/app.ccb897de.js" defer></script><script src="/echarts-vue-components/assets/js/2.6ff0a736.js" defer></script><script src="/echarts-vue-components/assets/js/9.ca291601.js" defer></script>
+    <script src="/echarts-vue-components/assets/js/app.c3f1b550.js" defer></script><script src="/echarts-vue-components/assets/js/2.6ff0a736.js" defer></script><script src="/echarts-vue-components/assets/js/9.ab9e8b42.js" defer></script>
   </body>
 </html>
